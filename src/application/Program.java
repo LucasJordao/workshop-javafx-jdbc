@@ -16,8 +16,14 @@ public class Program {
 		
 //		Delete Department
 		
-		depDao.delete(5);
+//		depDao.delete(5);
 
+//	Update Department
+		
+		dep.setName("Desk");
+		depDao.update(dep);
+		System.out.println(dep.getId());
+		
 	}
 
 }
