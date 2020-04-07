@@ -2,38 +2,23 @@ package application;
 
 import java.util.List;
 
-import model.dao.DepartmentDao;
 import model.dao.FactoryDao;
+import model.dao.SellerDao;
 import model.entities.Department;
+import model.entities.Seller;
 
 public class Program {
 
 	public static void main(String[] args) {
-		DepartmentDao depDao = FactoryDao.createDepartmentDao();
+		Department dep = new Department(1, null);
 		
-////		Create Department
-//		
-//		Department dep = new Department(0, "Operation");
-//		depDao.create(dep);
-//		
-////		Delete Department
-//		
-////		depDao.delete(5);
-//
-////	Update Department
-//		
-//		dep.setName("Desk");
-//		depDao.update(dep);
-//		System.out.println(dep.getId());
-
-		List<Department> lista = FactoryDao.createDepartmentDao().findAll();
+		SellerDao  selDao = FactoryDao.createSellerDao();
 		
-		for(Department dep: lista) {
-			System.out.println(dep);
+		List<Seller> list = selDao.findByDepartment(dep);
+	
+		for(Seller sel: list) {
+			System.out.println(sel);
 		}
-		
-		Department dep = FactoryDao.createDepartmentDao().findById(1);
-		System.out.println(dep);
 	}
 
 }
