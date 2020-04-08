@@ -27,13 +27,21 @@ public class Program {
 		
 //		FindAll
 		
-		System.out.println("FindAll: ");
+		System.out.println("\n\nFindAll: ");
 		
 		List<Seller> lista = selDao.findAll();
 		
 		for(Seller sel: lista) {
 			System.out.println(sel);
 		}
+		
+//		FindById
+		
+		System.out.println("\n\nFindById: ");
+		
+		Seller seller = selDao.findById(1);
+		System.out.println(seller);
+		
+		
 	}
-
 }
