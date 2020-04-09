@@ -1,5 +1,7 @@
 package application;
 
+import java.text.ParseException;
+import java.text.SimpleDateFormat;
 import java.util.List;
 
 import model.dao.FactoryDao;
@@ -9,7 +11,7 @@ import model.entities.Seller;
 
 public class Program {
 
-	public static void main(String[] args) {
+	public static void main(String[] args){
 		Department dep = new Department(1, null);
 		
 		SellerDao  selDao = FactoryDao.createSellerDao();
@@ -45,7 +47,19 @@ public class Program {
 //		Delete
 		
 		System.out.println("\n\nDelete: ");
-		selDao.delete(4);
+//		selDao.delete(4);
 		System.out.println("Okay");
+		
+//		Update
+		
+		System.out.println("\n\nUpdate: ");
+		SimpleDateFormat sdf = new SimpleDateFormat("dd/MM/yyyy");
+		Seller sell = null;
+		try {
+			sell = new Seller(1, "Lucas", "Lucas@hotmail.com", sdf.parse("12/11/2001"), 2999.0, new Department(2, null));
+		}catch(ParseException e) {
+			e.printStackTrace();
+		}
+		selDao.update(sell);
 	}
 }
