@@ -42,6 +42,10 @@ public class Program {
 		Seller seller = selDao.findById(1);
 		System.out.println(seller);
 		
+//		Delete
 		
+		System.out.println("\n\nDelete: ");
+		selDao.delete(4);
+		System.out.println("Okay");
 	}
 }
