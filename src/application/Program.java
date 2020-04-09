@@ -61,5 +61,20 @@ public class Program {
 			e.printStackTrace();
 		}
 		selDao.update(sell);
-	}
+		
+//		Create
+		
+		System.out.println("\n\nCreate: ");
+		try {
+			Seller sel = new Seller(null, "Marcos", "Marcos@gmail.com", sdf.parse("01/01/2000"), 3000.0, new Department(4, null));
+			selDao.create(sel);
+			System.out.println(sel.getId());
+		}catch(ParseException e) {
+			e.printStackTrace();
+		}
+		
+		
+	
+	}	
+
 }
