@@ -8,8 +8,8 @@ public class Department implements Serializable{
 	
 //	Attributes
 
-	private int id;
-	private String name;
+	private Integer id;
+	private String name = "";
 
 //	Constructor and Overloads
 
@@ -24,11 +24,11 @@ public class Department implements Serializable{
 
 //	Getters and Setters
 	
-	public int getId() {
+	public Integer getId() {
 		return id;
 	}
 
-	public void setId(int id) {
+	public void setId(Integer id) {
 		this.id = id;
 	}
 
