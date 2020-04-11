@@ -34,8 +34,11 @@
         <columns>
           <TableColumn fx:id="tableColumnId" prefWidth="75.0" text="Id" />
           <TableColumn fx:id="tableColumnName" prefWidth="75.0" text="Name" />
-            <TableColumn fx:id="tableColumnEDIT" prefWidth="75.0" />
-            <TableColumn fx:id="tableColumnREMOVE" prefWidth="75.0" />
+            <TableColumn fx:id="tableColumnEmail" prefWidth="133.0" text="Email" />
+            <TableColumn fx:id="tableColumnBirthDate" minWidth="0.0" prefWidth="89.0" text="BirthDate" />
+            <TableColumn fx:id="tableColumnBaseSalary" prefWidth="95.0" text="BaseSalary" />
+            <TableColumn fx:id="tableColumnEDIT" minWidth="0.0" prefWidth="64.0" />
+            <TableColumn fx:id="tableColumnREMOVE" prefWidth="71.0" />
         </columns>
          <VBox.margin>
             <Insets />
